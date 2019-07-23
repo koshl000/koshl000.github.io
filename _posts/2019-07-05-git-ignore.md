@@ -23,6 +23,7 @@ git rm -r --cached .
 The `.` indicates that all files will be untracked. You can untrack a specific file with git rm --cached foo.txt (thanks @amadeann).
 The rm command can be unforgiving. If you wish to try what it does beforehand, add the -n or --dry-run flag to test things out.
 
+<<<<<<< HEAD
 ## Step 3: Re add everything
 ```
 git add .
@@ -32,5 +33,12 @@ git add .
 git commit -m ".gitignore fix"
 ```
 Your repository is clean.
+=======
+##Step 3: Re add everything
+`git add .`
+##Step 4: Commit
+`git commit -m ".gitignore fix"`  
+Your repository is clean :)
+>>>>>>> 343f8c1... add post
 
 Push the changes to your remote to see the changes effective there as well.
