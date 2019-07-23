@@ -5,7 +5,7 @@ categories: aws
 tags: aws,s3
 author: moai
 ---
-출처:https://s3tools.org/kb/item10.htm  
+출처 : https://s3tools.org/kb/item10.htm  
 
 How to restrict access to a bucket to specific IP addresses
 To secure our files on Amazon S3, we can restrict access to a S3 bucket to specific IP addresses.

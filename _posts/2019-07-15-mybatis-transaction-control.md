@@ -5,7 +5,7 @@ categories: Mybatis
 tags: Mybatis,ORM
 author: moai
 ---
-출처:https://barunmo.blogspot.com/2013/06/mybatis.html    
+출처 : https://barunmo.blogspot.com/2013/06/mybatis.html    
 
 MyBatis 프레임워크의 트랜잭션 제어
 

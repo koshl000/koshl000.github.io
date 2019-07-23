@@ -5,7 +5,7 @@ categories: video
 tags: video,html,javascript
 author: moai
 ---
-출처:https://meetup.toast.com/posts/131    
+출처 : https://meetup.toast.com/posts/131    
 
 Adaptive Streaming의 흐름
 서버 파트
