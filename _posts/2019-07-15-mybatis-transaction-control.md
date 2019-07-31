@@ -5,7 +5,7 @@ categories: Mybatis
 tags: Mybatis,ORM
 author: moai
 ---
-출처 : https://barunmo.blogspot.com/2013/06/mybatis.html    
+출처 : [https://barunmo.blogspot.com/2013/06/mybatis.html][출처1]    
 
 MyBatis 프레임워크의 트랜잭션 제어
 
@@ -428,3 +428,5 @@ pom.xml
 맺음말 
 
  MyBatis는 iBatis의 대를 이은 훌륭한 프레임워크이다. MyBatis는 iBatis에서는 지원하지 않았던 내포 관계를 가진 여러 테이블의 레코드들을 복합 구조의 자바 도메인 객체로 매핑하게 해주는 기능을 제공하는 등, 그동안 iBatis에서 아쉬웠던 기능들을 추가적으로 제공해 주고 있다. 그리고 MyBatis 프로젝트는 계속 진행 중임으로 개발이 중단(?)된 iBatis처럼 어느 순간에 최신의 데이터베이스와 맞지 않게 될 위험성도 없다. 그러므로 이 글에서 설명한 자원 해제와 트랜잭션의 해결 방법을 적용한다면, iBatis만큼 편리하면서도 기능적으로도 더욱 풍부한 생산적인 프레임워크로 MyBatis를 활용할 수 있을 것이다.
+ 
+ [출처1]:https://barunmo.blogspot.com/2013/06/mybatis.html

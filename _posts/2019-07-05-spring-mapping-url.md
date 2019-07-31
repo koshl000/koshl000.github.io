@@ -2,7 +2,7 @@
 layout: post
 title:  "Servlet Mapping /와 /* 차이"
 categories: Spring
-tags: Spring,tomcat
+tags: Spring,Tomcat
 author: moai
 ---
 ${TOMCAT_HOME}/conf/web.xml을 보면

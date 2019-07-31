@@ -5,7 +5,7 @@ categories: Git
 tags: Git Github
 author: moai
 ---
-출처 : http://sunphiz.me/wp/archives/2266  
+출처 : [http://sunphiz.me/wp/archives/2266][출처1]   
 보통 브랜치(branch)는 특정 커밋(commit)의 revision number를 가리키고 HEAD가 이 브랜치를 가리킨다. 이렇게 HEAD -> 브랜치 -> 특정 커밋 순서로 commit을 가리키는 상태를 ‘attached HEAD’ 상태(state)라고 한다. 그리고, Detached HEAD란 HEAD가 브랜치를 통해 간접적으로 commit을 가리키지 않고, 직접 커밋을 가리키는 것을 말한다.
 
 
@@ -48,3 +48,5 @@ git checkout <revision number>
 >git checkout -b <new branch name>
 ```
 깃이 권장하는 방법이기도 하고 이를 위해 브랜치 만드는 비용(저장공간이나 컴퓨팅 파워)가 저렴하다. 커밋은 브랜치에 하고 혹시 모르는 사이에 detached HEAD가 된 커밋은 브랜치를 따로 만들거나 기존 브랜치에 변경사항을 이동하도록 하자.
+  
+[출처1]:http://sunphiz.me/wp/archives/2266

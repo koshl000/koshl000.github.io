@@ -5,7 +5,7 @@ categories: video
 tags: video,html,javascript
 author: moai
 ---
-출처 : https://meetup.toast.com/posts/131    
+출처 : [https://meetup.toast.com/posts/131][출처1]    
 
 Adaptive Streaming의 흐름
 서버 파트
@@ -245,3 +245,5 @@ MediaSource에서 사용하게될 코덱 데이터를 디코딩할 수 있는 so
 SourceBuffer에 초기화 세그먼트를 제공하고 디코딩이 완료되면 미디어 세그먼트를 제공한다.
 이후 progress와 seeking 이벤트 따라 비디오 객체의 타임라인 위치에 해당하는 미디어 세그먼트를 제공한다.
 예제 코드는 순수하게 MSE를 사용하는 방법에 대한 예제를 제공하고 있는데 실제 서비스에서는 DASH나 HLS형태의 Manifest를 다운로드하고 파싱해 미디어 정보를 얻어오는 부분이 포함되어야 한다. 그리고 유저의 Bandwidth를 체크해서 적절한 퀄리티를 선택하는 코드도 들어가야할 것이다. 사실 대역폭을 체크해서 최적의 해상도를 선정하는 부분은 생각보다 쉽지 않다. 클라이언트에서 대역폭을 측정해보면 순간순간의 편차가 매우 크기 때문에 (특히 모바일) 이 대역폭 값들을 어떻게 가공해서 사용할지에 대한 방법도 충분한 고려가 필요하다. 보통 EWMA Control Charts 를 이용해 모수를 추정한다.
+
+[출처1]:https://meetup.toast.com/posts/131
