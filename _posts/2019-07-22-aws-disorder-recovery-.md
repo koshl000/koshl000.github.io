@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Jquery load/ready 차이점"
+title:  "AWS 고려사항 및 장애대응"
 categories: AWS
 tags: AWS
 author: moai
