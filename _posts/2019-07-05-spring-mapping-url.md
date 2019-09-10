@@ -17,6 +17,9 @@ ${TOMCAT_HOME}/conf/web.xml을 보면
 	...
 </servlet>
 
+
+
+
 <!-- The mappings for the JSP servlet -->
 <servlet-mapping>
     <servlet-name>jsp</servlet-name>

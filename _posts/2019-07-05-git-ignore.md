@@ -14,6 +14,9 @@ Before proceeding, make sure all your changes are committed, including your `.gi
 ## Step 2: Remove everything from the repository
 To clear your repo, use:
 
+
+
+
 ```
 git rm -r --cached .
 ```

@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "REST API best practice"
-categories: MQ
-tags: MQ
+categories: Restful
+tags: Web,Restful
 author: moai
 ---
 

@@ -11,6 +11,9 @@ author: moai
 - 단 한대의 인스턴스를 사용하더라도 Auto Recovery 설정 혹은 Auto Scale Group을 통하여 장애 발생시 자동으로 인스턴스 교체
 - Multi AZ(가용영역) 구현으로 AZ Failure시 대응
 
+
+
+
 ## S3
 - 워크로드가 초당 100개 이상의 요청이 예상될 경우 순차적 키 이름 대신 랜덤키를 사용
  ```

@@ -20,6 +20,9 @@ author: moai
     - ec2 로그인에 사용되는 id(centos->centos,ubuntu->ubuntu,amazon linux->ec2-user)
 - **\<privateKey>d:/private/instance.pem<\/privateKey>**
     - ec2 로그인에 사용되는 key파일  
+
+
+
     
 ### pom.xml 설정
    
@@ -63,5 +66,5 @@ $mvn clean tomcat7:deploy -Dmaven.test.skip=true
 - **-Dmaven.test.skip=true**  
     -test관련 라이프사이클 스킵
 - **clean tomcat7:deploy**
-    -maven을 clean 시킨후 tocat7-maven-plugin을 실행시킴
+    -maven을 clean 시킨후 tocat플러그인 실행
 
