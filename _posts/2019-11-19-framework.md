@@ -61,7 +61,7 @@ IoC는 직관적이지 못하기 때문에 DI(Dependency Injection)라고도 부
 @Component
 @Primary
 public class ProductDaoImpl implements ProductDao {
-...(생략)...
+
 }
 ```
 
@@ -75,7 +75,7 @@ private ProductDao productDao;
 
 @Component("productDao")
 public class ProductDaoImpl implements ProductDao {
-...(생략)...
+
 }
 ```
 3.Bean 정의 파일인 context:component-scan을 이용하는 방법 (context:component-scan을 어느 정도 크기의 컴포넌트마다 기술해두고, 만약 어떤 컴포넌트를 테스트용으로 바꾸고자 할 때는 그 컴포넌트 부분의 정의만 테스트용 부품을 스캔하게 수정하는 방법이다.)
@@ -92,22 +92,22 @@ public class ProductDaoImpl implements ProductDao {
 @Component
 @Scope("singletone")
 public class ProductDaoImple implements ProductDao {
-...(생략)...
+
 }
 ```
 
->-singleton : 인스턴스를 싱글턴으로 함
->-prototype : 이용할 때마다 인스턴스화함
->-request : Servlet API의 request 스코프인 동안만 인스턴스가 생존함
->-session : Servlet API의 session 스코프인 동안만 인스턴스가 생존함
->-application : Servlet API의 application 스코프인 동안만 인스턴스가 생존함
+>-singleton : 인스턴스를 싱글턴으로 함  
+>-prototype : 이용할 때마다 인스턴스화함  
+>-request : Servlet API의 request 스코프인 동안만 인스턴스가 생존함  
+>-session : Servlet API의 session 스코프인 동안만 인스턴스가 생존함  
+>-application : Servlet API의 application 스코프인 동안만 인스턴스가 생존함  
 
 value 속성의 값은 직접 문자열로 넣어도 되지만, 상수가 존재하기 때문에 상수를 사용하는 것이 좋습니다.
   
->-singleton : BeanDefinition.SCOPE_SINGLETON
->-prototype : BeanDefinition.SCOPE_PROTOTYPE
->-request : WebApplicationContext.SCOPE_REQUEST
->-session : WebApplicationContext.SCOPE_SESSION
+>-singleton : BeanDefinition.SCOPE_SINGLETON  
+>-prototype : BeanDefinition.SCOPE_PROTOTYPE  
+>-request : WebApplicationContext.SCOPE_REQUEST  
+>-session : WebApplicationContext.SCOPE_SESSION  
 >-application : WebApplicationContext.SCOPE_APPLICATION
 
 [출처]: https://minwan1.github.io/2017/10/08/2017-10-08-Spring-Container,Servlet-Container
