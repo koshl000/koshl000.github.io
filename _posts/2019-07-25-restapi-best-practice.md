@@ -15,6 +15,9 @@ Typically we use a RESTful design for our web APIs. The concept of REST is to se
 
 These are 10 best practices to design a clean RESTful API:
 
+
+
+
 ## 1. Use nouns but no verbs  
 For an easy understanding use this structure for every resource:
 
