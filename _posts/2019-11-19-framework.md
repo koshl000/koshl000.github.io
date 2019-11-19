@@ -22,20 +22,33 @@ IoC 컨테이너 개념을 이해하기 위하여 이와 같은 컨테이너가 
 IoC를 사용하는 목적에 대해서는 지금까지의 클래스호출 방식의 변화를 살펴보면 더 쉽게 이해할 수 있습니다.
 
 #클래스 호출 방식
+클래스내에 선언과 구현이 같이 있기 때문에 다양한 형태로 변화가 불가능합니다.
+![class1](/assets/images/20191119/class1.png){: .center}  
+   
+#인터페이스 호출 방식
+클래스를 인터페이스와 인터페이스를 상속받아 구현하는 클래스로 분리했습니다. 구현클래스 교체가 용이하여 다양한 변화가 가능합니다. 그러나 구현클래스 교체시 호출클래스의 코드에서 수정이 필요합니다. (부분적으로 종속적)
+![class2](/assets/images/20191119/class2.png){: .center}  
+
+#팩토리 호출 방식
+팩토리 방식은 팩토리가 구현클래스를 생성하기 때문에 호출클래스는 팩토리를 호출 하는 코드로 충분합니다. 구현클래스 변경시 팩토리만 수정하면 되기 때문에 호출클래스에는 영향을 미치지 않습니다. 그러나 호출클래스에서 팩토리를 호출하는 코드가 들어가야 하는 것 또한 팩토리에 의존함을 의미합니다.
+![class3](/assets/images/20191119/class3.png){: .center}   
+
+#IoC
+팩토리 패턴의 장점을 더해 어떠한 것에도 의존하지 않는 형태가 되었습니다. 실행시점에 클래스간의 관계가 형성이 됩니다. 즉, 의존성이 삽입된다는 의미로 IoC를 DI라는 표현으로 사용합니다.
 클래스내에 선언과 구현이 같이 있기 때문에 다양한 형태로 변화가 불가능합니다.  
-![class1](/assets/images/20191119/class1.jpg){: .center}  
+![class1](/assets/images/20191119/class1.png){: .center}  
    
 #인터페이스 호출 방식
 클래스를 인터페이스와 인터페이스를 상속받아 구현하는 클래스로 분리했습니다. 구현클래스 교체가 용이하여 다양한 변화가 가능합니다. 그러나 구현클래스 교체시 호출클래스의 코드에서 수정이 필요합니다. (부분적으로 종속적)  
-![class2](/assets/images/20191119/class2.jpg){: .center}  
+![class2](/assets/images/20191119/class2.png){: .center}  
 
 #팩토리 호출 방식
 팩토리 방식은 팩토리가 구현클래스를 생성하기 때문에 호출클래스는 팩토리를 호출 하는 코드로 충분합니다. 구현클래스 변경시 팩토리만 수정하면 되기 때문에 호출클래스에는 영향을 미치지 않습니다. 그러나 호출클래스에서 팩토리를 호출하는 코드가 들어가야 하는 것 또한 팩토리에 의존함을 의미합니다.  
-![class3](/assets/images/20191119/class3.jpg){: .center}   
+![class3](/assets/images/20191119/class3.png){: .center}   
 
 #IoC
 팩토리 패턴의 장점을 더해 어떠한 것에도 의존하지 않는 형태가 되었습니다. 실행시점에 클래스간의 관계가 형성이 됩니다. 즉, 의존성이 삽입된다는 의미로 IoC를 DI라는 표현으로 사용합니다.  
-![class4](/assets/images/20191119/class4.jpg){: .center}   
+![class4](/assets/images/20191119/class4.png){: .center}   
 
 #IoC 용어 정리
 
@@ -53,7 +66,7 @@ IoC는 직관적이지 못하기 때문에 DI(Dependency Injection)라고도 부
 인스턴스 변수 앞에 @Autowired를 붙이면 DI 컨테이너가 그 인스턴스 변수의 형에 대입할 수 있는 클래스를 @Component가 붙은 클래스 중에서 찾아내 그 인스턴스를 인젝션해줍니다(정확히는 Bean 정의에서 클래스를 스캔할 범위를 정해야 합니다). 인스턴스 변수로의 인젝션은 접근 제어자가 private라도 인젝션 할 수 있으므로 Setter 메서드를 만들 필요는 없습니다. (과거에 캡슐화의 정보 은닉에 반하는 것이 아니냐는 논의가 있었지만, 현재는 편리함에 밀려 그런 논의를 보기 힘들어졌습니다.)
 만약 @Component가 붙은 클래스가 여러 개 있어도 형이 다르면 @Autowired가 붙은 인스턴스 변수에 인젝션되지 않습니다. 이렇게 형을 보고 인젝션하는 방법을 byType이라고 합니다.
   
-![class6](/assets/images/20191119/class6.png){: .center}   
+![class5](assets/images/20191119/interface_2_class.png){: .center}   
 1.위의 사진과 같이 인터페이스에 구현 클래스가 2개여서 @Autowired로 인젝션할 수 있는 클래스의 형이 2개 존재한다면 에러가 발생합니다. 인젝션할 수 있는 클래스의 형은 반드시 하나로 해야합니다. 하지만 이래서는 인터페이스의 구현 클래스를 테스트용 클래스 등 다른 클래스로 바꿀 경우에 불편합니다. 그래서 이를 회피하는 세 가지 방법에 대해 알아보겠습니다.
 우선할 디폴트 Bean을 설정하는 @Primary를 @Bean이나 @Component에 부여하는 방법 (Bean 정의 파일에서는 <bean primary="true">)
 ```java
@@ -102,7 +115,7 @@ public class ProductDaoImple implements ProductDao {
 >-application : Servlet API의 application 스코프인 동안만 인스턴스가 생존함
 
 value 속성의 값은 직접 문자열로 넣어도 되지만, 상수가 존재하기 때문에 상수를 사용하는 것이 좋습니다.
-
+  
 >-singleton : BeanDefinition.SCOPE_SINGLETON
 >-prototype : BeanDefinition.SCOPE_PROTOTYPE
 >-request : WebApplicationContext.SCOPE_REQUEST
